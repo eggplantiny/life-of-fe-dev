@@ -1,0 +1,3 @@
+img {
+    @apply w-full object-contain h-90 rounded-lg mt-8;
+}

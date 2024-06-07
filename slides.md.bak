@@ -1,0 +1,149 @@
+---
+theme: seriph
+background: https://cover.sli.dev
+title: About Frontend Developer's Life
+info: |
+  ## 프론트엔드 개발자의 삶이란...? 🥺
+  프론트엔드 개발자가 되고싶은 모든 개발자들에게
+
+  Learn more at [Sli.dev](https://sli.dev)
+# apply any unocss classes to the current slide
+class: text-center
+# https://sli.dev/custom/highlighters.html
+highlighter: shiki
+# https://sli.dev/guide/drawing
+drawings:
+  persist: false
+# slide transition: https://sli.dev/guide/animations#slide-transitions
+transition: slide-left
+# enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
+mdc: true
+---
+
+# About Frontend Developer's Life
+
+## 프론트엔드 개발자의 삶
+
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    프론트엔드 개발자가 되고싶은 모든 개발자들에게 <carbon:arrow-right class="inline"/>
+  </span>
+</div>
+
+<div class="abs-br m-6 flex gap-2">
+  <a href="https://github.com/eggplantiny/life-of-fe-dev" target="_blank" alt="GitHub" title="Open in GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
+
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+
+---
+transition: slide-up
+---
+
+
+# 목차
+
+<Toc minDepth="1" maxDepth="2"></Toc>
+
+---
+transition: slide-up
+---
+
+# FE 개발이란?
+
+프론트엔드 개발은 사용자가 직접적으로 상호작용하는 웹사이트나 애플리케이션의 **UX/UI**를 개발하는 역할
+
+![FE and BE](/fe-and-be.webp)
+
+<!--
+프론트엔드 개발은 사용자가 직접적으로 상호작용하는 웹사이트나 애플리케이션의 UI(User Interface)를 구축하고 유지보수하는 역할을 합니다.
+HTML, CSS, JavaScript를 활용하여 웹 페이지를 구성하고, 사용자 경험을 향상시키기 위해 다양한 기술을 적용합니다.
+-->
+
+---
+transition: slide-up
+level: 2
+layout: image-right
+image: /fe2.jpeg
+backgroundSize: contain
+---
+
+# FE 개발자의 역할
+
+- 🧑‍💻 **기능 개발**
+- 🧑‍🎨 **UI/UX 구현**
+- 🗣️ **협업과 커뮤니케이션**
+- 🐞 **테스트와 디버깅**
+
+<!--
+### 기능 개발
+- JavaScript와 프레임워크를 사용해 동적인 웹 애플리케이션 기능을 개발.
+
+### UI/UX 구현
+- 디자이너와 협업하여 사용자 인터페이스를 구현.
+
+### 테스트와 디버깅
+- 버그를 수정하고 코드의 안정성을 확보.
+
+### 협업과 커뮤니케이션
+- 백엔드 개발자, 기획자, 디자이너 등과 원활하게 소통하여 프로젝트 목표를 달성.
+-->
+
+---
+transition: slide-up
+level: 2
+layout: image-right
+image: /3.png
+backgroundSize: contain
+---
+
+# FE 개발의 기본 개념
+
+## FE 개발의 3대 요소
+- **HTML**
+- **CSS**
+- **JavaScript**
+
+## FE 의 환경
+- **브라우저**
+- **DOM** & **CSSOM**
+- **FE 프레임워크**
+
+<!--
+### HTML, CSS, JavaScript
+- **HTML**: 웹 페이지의 구조를 정의.
+- **CSS**: 웹 페이지의 스타일을 정의.
+- **JavaScript**: 웹 페이지에 동적인 기능을 추가.
+
+### 웹 브라우저와 DOM
+- **웹 브라우저**: 사용자가 웹 페이지를 볼 수 있게 해주는 소프트웨어.
+- **DOM (Document Object Model)**: 웹 페이지의 구조화된 표현으로 자바스크립트를 통해 조작 가능.
+-->
+
+---
+transition: slide-up
+level: 3
+layout: image-right
+image: /4.png
+backgroundSize: contain
+---
+
+# FE 개발 프레임워크
+
+### React
+<span v-mark.underline.indigo>컴포넌트 기반 구조</span>, 단방향 데이터 흐름, Virtual DOM 사용
+
+### Vue.js
+<span v-mark.underline.indigo>반응형 데이터 흐름</span>, 직관적인 API, 컴포넌트 기반
+
+### Angular
+MVC 패턴, 양방향 데이터 바인딩, 의존성 주입
+
+### Svelte
+컴파일러 기반, 가볍고 빠른 성능, <span v-mark.underline.indigo>단순한 상태 관리</span>
+

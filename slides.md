@@ -1,7 +1,7 @@
 ---
 theme: seriph
 background: https://cover.sli.dev
-title: Life of Frontend Developer
+title: About Frontend Developer's Life
 info: |
   ## 프론트엔드 개발자의 삶이란...? 🥺
   프론트엔드 개발자가 되고싶은 모든 개발자들에게
@@ -15,12 +15,12 @@ highlighter: shiki
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations#slide-transitions
-transition: slide-left
+transition: slide-up
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 ---
 
-# Life of Frontend Developer
+# About Frontend Developer's Life
 
 ## 프론트엔드 개발자의 삶
 
@@ -42,597 +42,257 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-transition: fade-out
 ---
 
-# What is Slidev?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+# 목차
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
+<Toc minDepth="1" maxDepth="2"></Toc>
 
 ---
 transition: slide-up
+---
+
+# FE 개발이란?
+
+프론트엔드 개발은 사용자가 직접적으로 상호작용하는 웹사이트나 애플리케이션의 **UX/UI**를 개발하는 역할
+
+![FE and BE](/fe-and-be.webp)
+
+<!--
+프론트엔드 개발은 사용자가 직접적으로 상호작용하는 웹사이트나 애플리케이션의 UI(User Interface)를 구축하고 유지보수하는 역할을 합니다.
+HTML, CSS, JavaScript를 활용하여 웹 페이지를 구성하고, 사용자 경험을 향상시키기 위해 다양한 기술을 적용합니다.
+-->
+
+---
 level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
-
----
 layout: image-right
-image: https://cover.sli.dev
+image: /fe2.jpeg
+backgroundSize: contain
 ---
 
-# Code
+# FE 개발자의 역할
 
-Use code snippets and get the highlighting directly, and even types hover![^1]
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+- 🧑‍💻 **기능 개발**
+- 🧑‍🎨 **UI/UX 구현**
+- 🗣️ **협업과 커뮤니케이션**
+- 🐞 **테스트와 디버깅**
 
 <!--
-Notes can also sync with clicks
+### 기능 개발
+- JavaScript와 프레임워크를 사용해 동적인 웹 애플리케이션 기능을 개발.
 
-[click] This will be highlighted after the first click
+### UI/UX 구현
+- 디자이너와 협업하여 사용자 인터페이스를 구현.
 
-[click] Highlighted with `count = ref(0)`
+### 테스트와 디버깅
+- 버그를 수정하고 코드의 안정성을 확보.
 
-[click:3] Last click (skip two clicks)
+### 협업과 커뮤니케이션
+- 백엔드 개발자, 기획자, 디자이너 등과 원활하게 소통하여 프로젝트 목표를 달성.
+-->
+
+
+---
+level: 2
+layout: image-right
+image: /5.jpeg
+backgroundSize: contain
+---
+
+# FE 개발자의 회사 내 위치
+
+- 🧑‍💻다양한 서비스 개발에 참여하는 멋진 사람 <v-click>(Admin Service, CMS, Vertial App, Mobile Web etc..)</v-click>
+<v-click>(기술이 빠르게 바뀌어 공부 할게 많은데 인원은 적어서 맨날 야근하는 노예)</v-click>
+- 🕺💃 다양한 직군과 협업 하는 슈퍼 인싸<v-click>(UI/UX 디자이너, 백엔드 개발자, 기획자, 사업부서 등)</v-click>
+<v-click>(문제 터지면 FE 개발자부터 줘팸당함. 동네북 🥲)</v-click>
+
+<!--
+-->
+
+
+---
+level: 1
+layout: image-right
+image: /3.png
+backgroundSize: contain
+---
+
+# FE 개발의 기본 개념
+
+## FE 개발의 3대 요소
+- **HTML**
+- **CSS**
+- **JavaScript**
+
+## FE 의 환경
+- **브라우저**
+- **DOM** & **CSSOM**
+- **FE 프레임워크**
+
+<!--
+### HTML, CSS, JavaScript
+- **HTML**: 웹 페이지의 구조를 정의.
+- **CSS**: 웹 페이지의 스타일을 정의.
+- **JavaScript**: 웹 페이지에 동적인 기능을 추가.
+
+### 웹 브라우저와 DOM
+- **웹 브라우저**: 사용자가 웹 페이지를 볼 수 있게 해주는 소프트웨어.
+- **DOM (Document Object Model)**: 웹 페이지의 구조화된 표현으로 자바스크립트를 통해 조작 가능.
+-->
+
+---
+level: 2
+layout: image-right
+image: /4.png
+backgroundSize: contain
+---
+
+# FE 개발 프레임워크
+
+### React
+<span v-mark.highlight.indigo>컴포넌트 기반 구조</span>, 단방향 데이터 흐름, Virtual DOM 사용
+
+### Vue.js
+<span v-mark.highlight.indigo>반응형 데이터 흐름</span>, 직관적인 API, 컴포넌트 기반
+
+### Angular
+MVC 패턴, 양방향 데이터 바인딩, 의존성 주입
+
+### Svelte
+컴파일러 기반, 가볍고 빠른 성능, <span v-mark.highlight.indigo>단순한 상태 관리</span>
+
+---
+level: 2
+---
+
+# FE 프레임워크의 주요 개념
+
+### 컴포넌트 기반 구조
+- UI를 독립적이고 <span v-mark.highlight.indigo>재사용 가능한 컴포넌트로 분리하여 관리</span>
+- 복잡한 사용자 인터페이스를 관리하기 위해 컴포넌트 단위의 구조화된 개발 필요.
+
+### 반응형 데이터 흐름
+- <span v-mark.highlight.indigo>데이터가 변경될 때 자동으로 UI가 업데이트되는 방식</span>
+- 데이터와 UI 간의 동기화를 자동으로 처리하여 사용자 인터페이스의 일관성을 유지.
+
+### 단순한 상태 관리
+- 애플리케이션이나 <span v-mark.highlight.indigo>컴포넌트의 상태를 단순하고 명확하게 관리</span>
+- 코드의 가독성을 높이고 디버깅을 용이하게 함.
+
+<!-- 
+### 컴포넌트 기반 구조
+- UI를 독립적이고 재사용 가능한 컴포넌트로 분리하여 관리. 각 컴포넌트는 고유의 상태와 로직을 가지며, 전체 애플리케이션의 복잡성을 줄이고 유지보수를 용이하게 합니다.
+- 프론트엔드 개발에서는 복잡한 사용자 인터페이스를 관리하기 위해 구조화된 접근이 필요합니다. 컴포넌트 기반 구조는 재사용성과 유지보수성을 높여주며, 변경 사항이 특정 컴포넌트에 국한되도록 하여 전체 애플리케이션의 안정성을 유지합니다.
+
+### 반응형 데이터 흐름
+- 데이터가 변경될 때 자동으로 UI가 업데이트되는 방식. 데이터와 UI 간의 동기화를 자동으로 처리하여 사용자 인터페이스의 일관성을 유지합니다.
+- 프론트엔드 개발에서는 실시간으로 변화하는 데이터를 처리해야 합니다. 반응형 데이터 흐름은 사용자 상호작용에 즉각적으로 반응하여 더 나은 사용자 경험을 제공합니다.
+
+### 단순한 상태 관리
+- 애플리케이션의 상태를 단순하고 명확하게 관리하여, 코드의 가독성을 높이고 디버깅을 용이하게 합니다. 작은 규모의 프로젝트나 단순한 상태 변경이 필요한 경우 적합합니다.
+- 프론트엔드에서는 여러 사용자 상호작용과 데이터 상태를 관리해야 하므로, 단순한 상태 관리가 필요합니다. 복잡한 상태 관리 시스템은 오히려 개발을 어렵게 만들 수 있기 때문에, 상태 관리를 단순화하면 코드 유지보수와 오류 디버깅이 용이해집니다.
 -->
 
 ---
 level: 2
 ---
 
-# Shiki Magic Move
+# 취업에는...?
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+![React...](/6.png)
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
+<v-click>리엑트로 천하통일중</v-click>
 
 ---
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
+level: 2
+layout: image-right
+image: /7.jpg
+backgroundSize: contain
 ---
 
-# Themes
+# 결국에는 닮아가는 FE Framework
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+<v-clicks>
 
-<div grid="~ cols-2 gap-2" m="t-2">
+- React 의 Virtual DOM 과 Angular 의 양방향 데이터 바인딩을 합쳐서 Vue 탄생!
 
-```yaml
----
-theme: default
----
-```
+- React 의 JSX 문법과 Vue 의 반응형을 합쳐서 Solid 탄생!
 
-```yaml
----
-theme: seriph
----
-```
+- Vue 의 개발 편의성을 제공하면서 VDOM 을 Compiler 로서 제거한 Svelte 탄생!
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+- Svelte 의 컴파일러 기반를 차용한 Vue/Vaper 탄생!
 
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+- ... 결국엔 다들 특징이 비슷해짐
 
-</div>
+</v-clicks>
 
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
+level: 2
+align: center
+---
 
-# Clicks Animations
+# 그러니 결국엔 기본기
 
-You can add `v-click` to elements to add a click animation.
+![기본기](/3.png)
 
-<div v-click>
+<span v-mark.underline.indigo>브라우저 동작 원리</span>
+와
+<span v-mark.underline.indigo>웹 표준</span>
+에 대한 이해,
+<span v-mark.underline.indigo>HTML</span>
+,
+<span v-mark.underline.indigo>CSS</span>
+,
+<span v-mark.underline.indigo>JavaScript</span>
+의 <span v-mark.circle.indigo>기본기를 탄탄히 다지는 것이 중요</span>
 
-This shows up when you click the slide:
+---
+transition: slide-left
+---
 
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
+# 마무리
 
-</div>
+---
+level: 3
+transition: slide-left
+---
 
-<br>
+### **Q. 프론트엔드 개발자의 삶은 어떤가요?**
 
 <v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
+A. 재밌어요 하지만 힘들어요...🥹
 </v-click>
 
-<div mt-20 v-click>
+---
+level: 3
+transition: slide-left
+---
 
-[Learn More](https://sli.dev/guide/animations#click-animations)
+### **Q. 프론트엔드 개발자가 되고 싶은데 어떻게 해야하나요?**
 
-</div>
+<v-click>
+A. 기본기를 탄탄히 다지고, 프로젝트를 진행해보세요! 🚀
+</v-click>
+
+<br/>
+<v-click>
+(한국에서 취업할려면 React 로 🥺)
+</v-click>
+
+
+---
+level: 3
+transition: slide-left
+---
+
+### **Q. 프론트엔드 개발자의 삶을 한 마디로 표현한다면?**
+
+<v-click>
+A. "끝없는 도전의 연속" 📚
+</v-click>
 
 ---
 
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-foo: bar
-dragPos:
-  square: 487,211,104,_
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="561,280,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
-
----
-layout: center
-class: text-center
----
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+감사합니다 🙏
