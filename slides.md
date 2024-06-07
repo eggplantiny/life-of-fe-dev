@@ -31,6 +31,14 @@ mdc: true
 </div>
 
 <div class="abs-br m-6 flex gap-2">
+  <a href="https://www.eggp.io/" target="_blank" alt="eggp" title="Open in My Site"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-earth-southeast-asia-filled />
+  </a>
+    <a href="https://www.linkedin.com/in/eggp-io/" target="_blank" alt="LinkedIn" title="Open in LinkedIn"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-linkedin />
+  </a>
   <a href="https://github.com/eggplantiny/life-of-fe-dev" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
